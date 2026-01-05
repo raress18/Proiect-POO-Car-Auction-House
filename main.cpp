@@ -13,7 +13,6 @@
 
 using namespace std;
 
-// Functie helper pentru a curata buffer-ul cin
 void clearInput() {
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');

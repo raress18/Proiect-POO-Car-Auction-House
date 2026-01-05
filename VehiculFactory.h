@@ -10,7 +10,7 @@
 #include "Vehicul.h"
 #include "SpecificatiiTehnice.h"
 #include "DataOra.h"
-#include "Derivate.h" // Necesar pentru enum TipMotocicleta
+#include "Derivate.h"
 
 class VehiculFactory {
 public:

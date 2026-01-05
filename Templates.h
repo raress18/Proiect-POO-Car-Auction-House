@@ -19,12 +19,12 @@ private:
 public:
     explicit ColectieGenerica(std::string nume) : numeColectie(std::move(nume)) {}
 
-    // Operator += pentru a adauga elemente usor
+    // Operator += pentru a adauga elemente
     void operator+=(const T& element) {
         elemente.push_back(element);
     }
 
-    // Operator [] pentru acces rapid
+    // Operator [] acces rapid
     T& operator[](int index) {
         if (index >= 0 && index < elemente.size()) {
             return elemente[index];
@@ -80,7 +80,7 @@ inline void afiseazaVectorCuTitlu<double>(const std::vector<double>& lista, cons
         }
         std::cout << " TOTAL: " << total << " EUR\n";
 
-        // Resetam formatarea cout la default
+        // Reset
         std::cout.unsetf(std::ios::fixed);
     }
 }

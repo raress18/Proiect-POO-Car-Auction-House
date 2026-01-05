@@ -3,8 +3,6 @@
 //
 
 #include "VehiculFactory.h"
-// Nu e nevoie sa includem Derivate.h aici daca e inclus in .h,
-// dar pentru claritate si siguranta ca avem constructorii vizibili:
 #include "Derivate.h"
 #include "Microbuz.h"
 
