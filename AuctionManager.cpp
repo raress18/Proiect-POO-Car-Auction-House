@@ -3,6 +3,9 @@
 //
 
 #include "AuctionManager.h"
+
+#include <algorithm>
+
 #include "Exceptii.h"
 #include <utility>
 
@@ -150,6 +153,22 @@ ostream& operator<<(ostream& os, const AuctionManager& manager) {
     os << "Vehicule in inventar: " << manager.inventarVehicule.size() << "\n";
     os << "Licitatii create: " << manager.listaLicitatii.size() << "\n";
     return os;
+}
+
+void AuctionManager::stergeVehiculDinParc(const string& vin) {
+    // Folosim std::remove_if impreuna cu o functie Lambda
+    auto it = std::remove_if(inventarVehicule.begin(), inventarVehicule.end(),
+        [&vin](const std::unique_ptr<Vehicul>& v) {
+            return v->getVIN() == vin; // Cautam masina cu acest VIN
+        });
+
+    // Daca a gasit-o, o stergem efectiv din vector
+    if (it != inventarVehicule.end()) {
+        inventarVehicule.erase(it, inventarVehicule.end());
+        cout << "[RAM] Vehiculul a fost sters cu succes din memoria curenta.\n";
+    } else {
+        cout << "[RAM] Vehiculul cu acest VIN nu exista in parc.\n";
+    }
 }
 
 const std::vector<Participant>& AuctionManager::getListaParticipanti() const {

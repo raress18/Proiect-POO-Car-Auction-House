@@ -28,6 +28,12 @@ public:
     [[nodiscard]] std::string tractiuneToString() const;
 
     friend std::ostream& operator<<(std::ostream& os, const SpecificatiiTehnice& spec);
+
+    [[nodiscard]] int getCapacitate() const;
+    [[nodiscard]] int getPutere() const;
+    [[nodiscard]] TipCombustibil getCombustibil() const;
+    [[nodiscard]] TipCutie getCutie() const;
+    [[nodiscard]] Tractiune getTractiune() const;
 };
 
 #endif //PROIECT_POO_SPECIFICATIITEHNICE_H//PROIECT_POO_SPECIFICATIITEHNICE_H

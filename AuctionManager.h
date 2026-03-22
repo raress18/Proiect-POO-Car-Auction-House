@@ -40,6 +40,7 @@ public:
     void inregistrareParticipant(const Participant& p);
     Participant* getParticipantById(int id);
     void adaugaVehiculInParc(std::unique_ptr<Vehicul> vehicul);
+    void stergeVehiculDinParc(const std::string& vin);
     void creeazaLicitatie(const std::string& vin, const DataOra& start, int durata, const std::string& descriere);
     Licitatie* getLicitatieById(int id);
     void afiseazaInventar() const;

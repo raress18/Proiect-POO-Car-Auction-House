@@ -125,3 +125,35 @@ ostream& operator<<(ostream& os, const Vehicul& vehicul) {
 const string& Vehicul::getVIN() const {
     return vin;
 }
+
+const std::string& Vehicul::getMarca() const {
+    return marca;
+}
+
+const std::string& Vehicul::getModel() const {
+    return model;
+}
+
+int Vehicul::getAnFabricatie() const {
+    return anFabricatie;
+}
+
+int Vehicul::getKilometraj() const {
+    return kilometraj;
+}
+
+int Vehicul::getPretInitial() const {
+    return pretInitial;
+}
+
+// Convertim char* in string. Daca e nullptr, returnam un string gol ca sa nu crape programul.
+std::string Vehicul::getObservatii() const {
+    if (observatiiTehnice != nullptr) {
+        return std::string(observatiiTehnice);
+    }
+    return "";
+}
+
+const SpecificatiiTehnice& Vehicul::getSpecificatii() const {
+    return specificatiiTehnice;
+}

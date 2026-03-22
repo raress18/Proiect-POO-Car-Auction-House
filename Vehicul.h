@@ -47,6 +47,13 @@ public:
     friend std::ostream& operator<<(std::ostream& os, const Vehicul& vehicul);
 
     [[nodiscard]] const std::string& getVIN() const;
+    [[nodiscard]] const std::string& getMarca() const;
+    [[nodiscard]] const std::string& getModel() const;
+    [[nodiscard]] int getAnFabricatie() const;
+    [[nodiscard]] int getKilometraj() const;
+    [[nodiscard]] int getPretInitial() const;
+    [[nodiscard]] std::string getObservatii() const;
+    [[nodiscard]] const SpecificatiiTehnice& getSpecificatii() const;
 };
 
 #endif //PROIECT_POO_VEHICUL_H

@@ -45,3 +45,23 @@ ostream& operator<<(ostream& os, const SpecificatiiTehnice& spec) {
     os << "Tractiune: " << spec.tractiuneToString() << "\n";
     return os;
 }
+
+int SpecificatiiTehnice::getCapacitate() const {
+    return capacitateCilindrica;
+}
+
+int SpecificatiiTehnice::getPutere() const {
+    return putere;
+}
+
+TipCombustibil SpecificatiiTehnice::getCombustibil() const {
+    return combustibil;
+}
+
+TipCutie SpecificatiiTehnice::getCutie() const {
+    return cutie;
+}
+
+Tractiune SpecificatiiTehnice::getTractiune() const {
+    return tractiune;
+}

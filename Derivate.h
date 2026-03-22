@@ -22,6 +22,8 @@ public:
     [[nodiscard]] Vehicul* clone() const override;
 
     friend std::ostream& operator<<(std::ostream& os, const Autoturism& autoturism);
+
+    [[nodiscard]] bool getECoupe() const;
 };
 
 class Autoutilitara : public Vehicul {
@@ -39,6 +41,8 @@ public:
     [[nodiscard]] Vehicul* clone() const override;
 
     friend std::ostream& operator<<(std::ostream& os, const Autoutilitara& autoutilitara);
+
+    [[nodiscard]] double getMasaMaxima() const;
 };
 
 enum TipMotocicleta {
@@ -66,6 +70,8 @@ public:
     [[nodiscard]] std::string tipToString() const;
 
     friend std::ostream& operator<<(std::ostream& os, const Motocicleta& motocicleta);
+
+    [[nodiscard]] TipMotocicleta getTipMoto() const;
 };
 
 #endif //PROIECT_POO_DERIVATE_H

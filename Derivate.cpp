@@ -147,3 +147,15 @@ ostream& operator<<(ostream& os, const Motocicleta& motocicleta) {
     motocicleta.afiseaza(os);
     return os;
 }
+
+bool Autoturism::getECoupe() const {
+    return eCoupe;
+}
+
+double Autoutilitara::getMasaMaxima() const {
+    return masaMaximaAdmisa;
+}
+
+TipMotocicleta Motocicleta::getTipMoto() const {
+    return tip;
+}
