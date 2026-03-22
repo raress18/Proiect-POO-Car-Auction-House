@@ -6,11 +6,9 @@ Proiectul a fost dezvoltat pentru a pune în practică concepte avansate de **Pr
 
 ##  Tehnologii și Concepte Evidențiate
 
-Acest proiect nu este doar un simplu CRUD, ci integrează concepte esențiale din industrie:
-
 * **C++ Modern (C++11/14/17):**
   * Managementul memoriei folosind **Smart Pointers** (`std::unique_ptr`).
-  * Utilizarea funcțiilor **Lambda** și a algoritmilor STL (ex: *Erase-Remove Idiom* cu `std::remove_if` pentru ștergeri sigure din memorie).
+  * Utilizarea funcțiilor **Lambda** și a algoritmilor STL.
 * **Design Patterns:**
   * **Singleton:** Aplicat pe clasa `AuctionManager` pentru a avea un singur punct central de control al aplicației.
   * **Factory Method:** Folosit (`VehiculFactory`) pentru crearea polimorfică a vehiculelor la runtime (Autoturisme, Utilitare, Motociclete).
@@ -23,7 +21,7 @@ Acest proiect nu este doar un simplu CRUD, ci integrează concepte esențiale di
 
 ## ⚙️ Funcționalități Principale
 
-1. **Gestiunea Inventarului:** Adăugarea vehiculelor (citire cu suport pentru spații), afișarea filtrată pe categorii și ștergerea lor definitivă (din DB și RAM).
+1. **Gestiunea Inventarului:** Adăugarea vehiculelor (citire cu suport pentru spații), afișarea filtrată pe categorii și ștergerea lor definitivă .
 2. **Sistem de Licitații:** Crearea de licitații cu durată și preț de pornire.
 3. **Participanți:** Înregistrarea utilizatorilor cu sold (buget) și actualizarea acestuia în timp real după plasarea ofertelor.
 4. **Scenariu Complex (Bid War):** O simulare automată a unei licitații intense între doi participanți pentru o mașină de colecție, demonstrând logica de validare a fondurilor.
